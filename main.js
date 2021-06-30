@@ -14,8 +14,15 @@ const rl = readline.createInterface({
 const pigLatin = (word) => {
 
   // Your code here
+  if(word[0] == "a" || "e" || "i" || "o" || "u" || "y"){
+    return word.trim().toLowerCase() + "yay";
+  }
+  else if (word[0] !== "a" || "e" || "i" || "o" || "u" || "y"){
+    return (word.substring(1));
+  }
 
 }
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
