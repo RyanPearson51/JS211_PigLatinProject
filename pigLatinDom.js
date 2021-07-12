@@ -6,18 +6,23 @@ const pigLatin = (word) => {
       let vowel = 'aeiouy'
       if (vowel.includes(word[0])) {
         return word + 'yay';
-      } else {
+      }
+       else {
         for (let i = 0; i<word.length; i++){
           if (vowel.indexOf(word[i])!== -1){
-            let beforeVowel = word.substring(0,i)
+            let beforeVowel = word.substring(0,i);
             return word.substring(i) + beforeVowel + 'ay';
             //if there is a vowel, beforeVowel will equal every character up to the first one
             //then return the rest of the word, + the initial characters before the vowel, + ay
           }
         }
       }
+      return word + 'ay';
     
     }
+    //else if(vowel.includes(word[i]) === -1){
+      //return word + 'ay';
+    //}
 
     
 
